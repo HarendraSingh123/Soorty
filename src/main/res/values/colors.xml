@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">@android:color/transparent</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="toolbar_background_color_black">#272728</color>
+    <color name="white">#ffffff</color>
+    <color name="tabs_background_black">#272728</color>
+    <color name="act_background_color">#EDEDED</color>
+    <color name="text_color_primary">#EF154F</color>
+    <color name="text_color">#363636</color>
+    <color name="black_30_opacity">#48000000</color>
+    <color name="text_color_50_opacity">#80363636</color>
+    <color name="white_50_opacity">#80FFFFFF</color>
+
+    <color name="colorPrimaryfoeapptheme1">#272728</color>
+    <color name="colorPrimaryDarkfoeapptheme">#272728</color>
+    <color name="nav_drawer_text_color">#bbbbbb</color>
+    <color name="nav_drawer_text_colors">#EF154F</color>
+</resources>
