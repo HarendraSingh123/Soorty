@@ -6,4 +6,83 @@
     <string name="title_profile">Profile</string>
     <string name="title_categories">Categories</string>
     <string name="title_Cart">Cart</string>
+    <string name="upload_photos_text">Upload your photos from anywhere, then \nplace them in your design with simple and \nintuitive controls.</string>
+    <string name="outstanding_quality_text">Outstanding \nQuality</string>
+    <string name="tv_please_enter_details">Please enter your details \nto continue</string>
+
+    <string name="login_with_facebok">Log in with facebook</string>
+    <string name="sign_in_with_google">Sign in with google</string>
+    <string name="welcome_to_utter">Welcome to </string>
+    <string name="welcome_text">Every component in Material Design world has an elevation analogous to our physical world.</string>
+    <string name="get_otp">GET OTP</string>
+    <string name="enter_phone_number">Enter Mobile Number</string>
+    <string name="home">Home</string>
+    <string name="wallet">Wallet</string>
+    <string name="reviews">Reviews</string>
+    <string name="menu_more">More</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_name">Your Name</string>
+    <string name="lastly_we_need">Lastly we need your few more following details to get started.</string>
+    <string name="email_address">Email Address</string>
+    <string name="proceed">PROCEED</string>
+    <string name="skip_the_task">SKIP THE TASK</string>
+    <string name="todays_visitors">Todays Visitors</string>
+    <string name="total_nregistered_location">Total \nRegistered location</string>
+    <string name="total_nregistered_review">Total \nRegistered reviews</string>
+    <string name="please_enable_permissions">please enable all permission</string>
+
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid lat long used</string>
+    <string name="no_address_found">No address found</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="image_instruction">Image size should be less then 1 MB  PNG, JPEG,SVG</string>
+    <string name="deal_name">Deal Name</string>
+    <string name="description">Description</string>
+    <string name="startDate">Start Date</string>
+    <string name="endDate">End Date</string>
+    <string name="validTill">Valid Till</string>
+    <string name="selectLocation">Select Location</string>
+    <string name="dealPrice">Deal Price</string>
+    <string name="redeemPoint">Reddem Points</string>
+
+    <string name="user_visited_today_s">User Visited Today\'s</string>
+    <string name="view_all">View All</string>
+
+    <string name="al_asayel_street_dubai_united_arab_erimates">Al Asayel Street - Dubai - United Arab Erimates</string>
+    <string name="rate_this_place">Rate This Place</string>
+    <string name="pay_using_point">Pay using loyality points</string>
+    <string name="pay_creadit">Creadit card</string>
+    <string name="edit_mobile_number">Your Mobile No.</string>
+    <string name="_971">+971</string>
+    <string name="enter_mobile_number">Enter Mobile</string>
+    <string name="change_mobile_number">Get Otp</string>
+
+    <string name="facebook_app_id">2068996109788739</string>
+    <string name="fb_login_protocol_scheme">fb2068996109788739</string>
+    <string name="order_preview">Order Preview</string>
+    <string name="total_nreviewed_by_you">Total \nReviewed By You</string>
+    <string name="places_you_visited">Places You Visited</string>
+    <string name="deal_you_have_purchased">Deal you have purchased</string>
+    <string name="view_deal_history">View Deal History</string>
+    <string name="like">Like</string>
+    <string name="dislike">DisLike</string>
+    <string name="helpful">Helpful</string>
+    <string name="no_data_text">Yoh have not added any deals yet. To add your deals, you need to add your locations by tapping on plus icon at dashboard screen (if locations are not registered)</string>
+    <string name="oh_uh">Oh - Uh!</string>
+    <string name="rate_review_this_place"><![CDATA[Rate & Review this place]]></string>
+    <string name="date_time"><![CDATA[Date & Time]]></string>
+    <string name="location">Location</string>
+    <string name="monthly_visitors">Monthly Visitors</string>
+    <string name="share_text">Share the link with friends to get 200 loyalty points in your wallet. </string>
+    <string name="invitation_deep_link">https://utternow.page.link</string>
+    <string name="invitation_cta">invitation cta</string>
+    <string name="invitation_custom_image">invitation image</string>
+    <string name="invitation_title">invitation title</string>
+    <string name="invitation_message">invitation message</string>
+    <string name="no_active_user">No Active user found at this time.</string>
+    <string name="no_chat_history">No chat history found at this time.</string>
+    <string name="by_signing_up_you_agree_to_utternow_s">By Signing up you agree to UtterNow\'s Terms and condition</string>
+
 </resources>

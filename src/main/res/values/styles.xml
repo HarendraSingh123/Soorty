@@ -1,15 +1,25 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">?attr/colorPrimary</item>
+
+    </style>
+    <style name="AppTheme.NoActionBar">
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorPrimary">@color/black80_opacity</item>
     </style>
 
 
 
+    <style name="XXXXXXAppTheme" parent="@style/Theme.MaterialComponents.Light.DarkActionBar"></style>
     <!--<style name="AppBaseTheme" parent="android:Theme.Light">
         &lt;!&ndash;
             Theme customizations available in newer API levels can go in
@@ -45,10 +55,7 @@
 
 
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+
 
     <style name="TransparentProgressDialog" parent="AlertDialog.AppCompat">
         <item name="android:windowFrame">@null</item>

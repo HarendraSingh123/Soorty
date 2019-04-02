@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">@android:color/transparent</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FF7D01</color>
+    <color name="colorblack">#121314</color>
+    <color name="colorgray">#E8E8E8</color>
 
     <color name="toolbar_background_color_black">#272728</color>
     <color name="white">#ffffff</color>
@@ -18,4 +20,52 @@
     <color name="colorPrimaryDarkfoeapptheme">#272728</color>
     <color name="nav_drawer_text_color">#bbbbbb</color>
     <color name="nav_drawer_text_colors">#EF154F</color>
+
+
+    <color name="black_effective">#2a2a2a</color>
+    <color name="facebook_btn_color">#1c80e1</color>
+    <color name="facebook_btn_color_25">#401c80E1</color>
+    <color name="facebook_btn_color_35">#561c80E1</color>
+
+    <color name="black_combo_add_to_cat">#363636</color>
+    <color name="black20_opacity">#32000000</color>
+    <color name="black25_opacity">#40000000</color>
+    <color name="black30_opacity">#48000000</color>
+    <color name="black35_opacity">#56000000</color>
+    <color name="black40_opacity">#4D000000</color>
+    <color name="black50_opacity">#80000000</color>
+    <color name="black55_opacity">#8c000000</color>
+    <color name="black60_opacity">#96000000</color>
+    <color name="black80_opacity">#cc000000</color>
+    <color name="black85_opacity">#d9000000</color>
+    <color name="black90_opacity">#e6000000</color>
+    <color name="black10_opacity">#1a000000</color>
+    <color name="colorPrimaryDark_25">#40164f8f</color>
+    <color name="colorPrimaryDark_35">#56164f8f</color>
+    <color name="google_color_btn">#dc4e41</color>
+    <color name="google_color_btn_35">#d23527</color>
+    <color name="device_color">#4291EE</color>
+    <color name="registered_location_line_color">#ff005a</color>
+    <color name="registered_review_line_color">#2F8FFF</color>
+    <color name="todays_visitor_color">#6B75F3</color>
+    <color name="ratting_color">#ffba00</color>
+    <color name="distance_button_color">#00a651</color>
+    <color name="distance_button_pressed_color">#02351b</color>
+    <color name="direction_color">#1078FF</color>
+    <color name="direction_pressed_color">#053e87</color>
+    <color name="green_details_screen_rating">#4EBE1D</color>
+
+    <color name="opace">#96000000</color>
+    <color name="black91_opacity">#e8000000</color>
+    <color name="button_bg">#3B62AB</color>
+    <color name="gray_view_line">#f0f0f0</color>
+    <color name="deal_price">#e61078ff</color>
+    <color name="discount_price_color">#fafe0000</color>
+    <color name="dcu_line_color">#FF7200</color>
+    <color name="you_shared_line_color">#c69c6d</color>
+    <color name="green60_opacity">#9000A651</color>
+    <color name="ylo60_opacity">#90ffba00</color>
+    <color name="red60_opacity">#90d23527</color>
+
+    <color name="alphaColorPrimary">#801c61ae</color>
 </resources>

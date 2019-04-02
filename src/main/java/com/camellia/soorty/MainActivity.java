@@ -3,13 +3,21 @@ package com.camellia.soorty;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.camellia.soorty.fragments.Cart_Fragment;
+import com.camellia.soorty.fragments.Categories_Fragment;
+import com.camellia.soorty.fragments.Home_Fragment;
+import com.camellia.soorty.fragments.Notification_Fragments;
+import com.camellia.soorty.fragments.Profile_Fragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    Fragment fragment;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -18,25 +26,34 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
+
+                    fragment=new Home_Fragment();
+                    break;
                 case R.id.navigation_categories:
-                    mTextMessage.setText(R.string.title_categories);
-                    return true;
+
+                    fragment=new Categories_Fragment();
+                    break;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+
+                    fragment=new Notification_Fragments();
+
+
+                    break;
 
                     case R.id.navigation_profile:
-                    mTextMessage.setText(R.string.title_profile);
-                    return true;
+
+                        fragment=new Profile_Fragment();
+
+
+                    break;
 
                 case R.id.naviagation_cart:
-                    mTextMessage.setText(R.string.title_Cart);
-                    return true;
 
+                   fragment=new Cart_Fragment();
+
+                   break;
             }
-            return false;
+            return loadFragment(fragment);
         }
     };
 
@@ -44,9 +61,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mTextMessage =  findViewById(R.id.message);
+
+        loadFragment(new Home_Fragment());
+
         BottomNavigationView navigation =  findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
+    private boolean loadFragment(android.support.v4.app.Fragment fragment) {
+        //switching fragment
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.content, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
+    }
+
+
 
 }
