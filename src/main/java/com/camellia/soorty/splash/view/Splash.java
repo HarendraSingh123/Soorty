@@ -4,16 +4,21 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 
 import com.camellia.soorty.BR;
-import com.camellia.soorty.MainActivity;
 import com.camellia.soorty.R;
 import com.camellia.soorty.Repos.MyAppPref;
+
+import com.camellia.soorty.activities.MainActivity;
+import com.camellia.soorty.activities.MainScreen;
+import com.camellia.soorty.activities.NoInternetConectionActivity;
 import com.camellia.soorty.databinding.SplashBinding;
-import com.camellia.soorty.login.view.Login;
+
 import com.camellia.soorty.splash.viewmodel.SplashViewModel;
 import com.camellia.soorty.utills.BaseActivity;
+import com.camellia.soorty.utills.CheckNetwork;
 
 import java.util.Calendar;
 
@@ -30,7 +35,6 @@ public class Splash extends BaseActivity<SplashBinding, SplashViewModel> {
     private long TIME_OUT_TIME = 1000;
     @Inject
     MyAppPref myAppPref;
-
     @Override
     public SplashViewModel getViewModel() {
         return splashViewModel;
@@ -54,7 +58,19 @@ public class Splash extends BaseActivity<SplashBinding, SplashViewModel> {
         timer = Calendar.getInstance().getTimeInMillis();
         runnable = () -> {
             timer = 0;
-            startNewActivity();
+
+            if(CheckNetwork.isInternetAvailable(getApplicationContext())) {
+                startNewActivity();
+
+            }
+
+            else
+            {
+                Intent intent =new Intent(Splash.this,NoInternetConectionActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+
+                }
 
         };
         handler = new Handler();
@@ -69,26 +85,25 @@ public class Splash extends BaseActivity<SplashBinding, SplashViewModel> {
     }
 
 
-
     private void startNewActivity() {
         if (myAppPref.getAccessToken() != null) {
+
+            Log.d("the access_token is ",myAppPref.getAccessToken());
 //            initializeFramework();
-//            loginMe();
+             loginMe();
         } else {
-            startActivity(new Intent(Splash.this, Login.class));
+            startActivity(new Intent(Splash.this, MainScreen.class));
             finish();
         }
     }
 
 
-
-
-
-
-    /*private void loginMe() {
+    private void loginMe() {
         showProgress();
-        Log.d("login " + myAppPref.getUserName().replaceAll(" ", "").toLowerCase() + "utter", "" + QB_PASSWORD);
-        QBUser qbUser = new QBUser();
+//        Log.d("login " + myAppPref.getUserName().replaceAll(" ", "").toLowerCase() + "utter", "" + QB_PASSWORD);
+
+        startMainView();
+       /* QBUser qbUser = new QBUser();
         qbUser.setLogin("utter"+myAppPref.getUserId());
         qbUser.setPassword(QB_PASSWORD);
         QBUsers.signIn(qbUser).performAsync(new QBEntityCallback<QBUser>() {
@@ -98,7 +113,7 @@ public class Splash extends BaseActivity<SplashBinding, SplashViewModel> {
                 hideProgress();
                 myAppPref.setQBUserId(qbUser2.getId());
                 qbUser.setId(qbUser2.getId());
-                ((MyApplication)getApplicationContext()).createChatSession(qbUser);
+//                ((MyApplication)getApplicationContext()).createChatSession(qbUser);
                 startMainView();
             }
 
@@ -110,24 +125,25 @@ public class Splash extends BaseActivity<SplashBinding, SplashViewModel> {
             }
 
 
-        });
+        });*/
     }
 
     private void startMainView() {
         Intent intent;
-        if (myAppPref.getUserType().equals(AppConstant.USERTYPE_ORG)) {
+       /* if (myAppPref.getUserType().equals(AppConstant.USERTYPE_ORG)) {
             intent = new Intent(this, OrgDashboard.class);
             startActivity(intent);
             finish();
-        } else {
-            intent = new Intent(Splash.this, CustomerHome.class);
+        } else */
+
+            {
+            intent = new Intent(Splash.this, MainActivity.class);
             startActivity(intent);
             finish();
+
+            hideProgress();
         }
     }
 
-    private void initializeFramework() {
-        QBSettings.getInstance().init(getApplicationContext(), BuildConfig.QB_APP_ID, BuildConfig.QB_AUTH_KEY, BuildConfig.QB_AUTH_SECRET);
-        QBSettings.getInstance().setAccountKey(BuildConfig.QB_ACCOUNT_KEY);
-    }*/
+
 }

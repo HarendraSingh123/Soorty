@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReferAndEarnActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_top_ref_and_earn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="top">
+
+        <ImageView
+            android:id="@+id/iv_back_photo_print"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+        <TextView
+            android:id="@+id/tv_back_photo_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#222222"
+            android:text="Back"
+            android:layout_toRightOf="@+id/iv_back_photo_print"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/sf_ui_display_regular"
+            />
+        <TextView
+            android:id="@+id/tv_titile_photo_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:text="REFER &amp; EARN"
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:textColor="#222222"
+            />
+
+        <View
+            android:id="@+id/view_sep_top"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_view_line"></View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_top_referearn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_ref_and_earn"
+        app:layout_constraintRight_toRightOf="parent">
+        <ImageView
+        android:id="@+id/iv_top_refer_and_earn"
+        android:layout_width="194dp"
+        android:layout_height="194dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/intro_screen_4_bg"
+        android:scaleType="fitXY" />
+
+
+        <TextView
+            android:id="@+id/tv_ref_and_earn_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_top_refer_and_earn"
+            android:layout_marginTop="27dp"
+            android:text="@string/text_ref_earn_details"
+            android:textSize="@dimen/text_size18"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#222222" />
+
+
+        <TextView
+            android:id="@+id/tv_your_ref_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR REFERRAL CODE"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/tv_ref_and_earn_details"
+            android:fontFamily="@font/sf_ui_display_regular"
+            />
+
+        <EditText
+            android:id="@+id/et_ref_code_ref_earn"
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:hint="Ronnie5241"
+            android:textColor="#121314"
+            android:layout_below="@+id/tv_your_ref_code"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:textSize="@dimen/text_size18"
+            android:paddingLeft="16dp"
+            android:fontFamily="@font/sf_ui_display_bold"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/tv_copy_refer_code_ref_earn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Copy"
+            android:textSize="@dimen/text_size16"
+            android:layout_toRightOf="@+id/et_ref_code_ref_earn"
+            android:layout_below="@+id/tv_your_ref_code"
+            android:background="@color/colorAccent"
+            android:layout_centerVertical="true"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical|center_horizontal"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:layout_marginTop="15dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_whats_app_ref_earn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/demo_icon"
+            android:layout_below="@+id/et_ref_code_ref_earn"
+            android:layout_marginLeft="108dp"
+            android:layout_marginTop="10dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_fb_ref_earn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/demo_icon"
+            android:layout_below="@+id/et_ref_code_ref_earn"
+            android:layout_marginLeft="142dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:id="@+id/iv_twiter_ref_earn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/demo_icon"
+            android:layout_below="@+id/et_ref_code_ref_earn"
+            android:layout_marginLeft="179dp"
+            android:layout_marginTop="10dp" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_more_ref_earn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/demo_icon"
+            android:layout_below="@+id/et_ref_code_ref_earn"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_did_frnd_ref_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Did a friend refer you?"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_below="@+id/et_ref_code_ref_earn"
+            android:textSize="@dimen/text_size14"
+            android:fontFamily="@font/sf_ui_display_regular"
+            />
+
+        <TextView
+            android:id="@+id/tv_enter_code_ref_earn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Code"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="227dp"
+            android:layout_below="@+id/et_ref_code_ref_earn"
+            android:textSize="@dimen/text_size14"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/sf_ui_display_regular"
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

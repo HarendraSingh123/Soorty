@@ -3,7 +3,7 @@ package com.camellia.soorty.login.model;
 
 
 import com.camellia.soorty.Repos.MyAppPref;
-import com.camellia.soorty.di.ApiInterface;
+import com.camellia.soorty.REST.ApiInterface;
 
 import io.reactivex.Observable;
 
@@ -17,7 +17,7 @@ public class SignInModel {
     }
 
     public Observable<GetOtpApiResponse> getOtp(String phoneNo,String countryCode) {
-        return apiInterface.getOtp();
+        return apiInterface.getOtp(phoneNo,countryCode);
     }
     public Observable<GetOtpApiResponse> verifyOtp(String phoneNo,String otp,String role,String countryCode) {
         return apiInterface.verifyOtp(phoneNo,otp,role,myAppPref.getFcmToken(),"android",countryCode);

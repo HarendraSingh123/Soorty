@@ -49,7 +49,6 @@ public abstract class BaseFragment<T extends ViewDataBinding, VM extends ViewMod
     public abstract VM getViewModel();
     public abstract void onRetryClicked();
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

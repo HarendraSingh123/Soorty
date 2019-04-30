@@ -4,17 +4,17 @@ package com.camellia.soorty.utills;
 
 public class AppConstant {
 
-    public static final String BASE_URL= "http://192.168.1.82/swagbike/api/";
+//    public static final String BASE_URL= "http://192.168.1.82/swagbike/api/";
 
     //Live url
 //     public static final String BASE_URL= "http://13.233.239.210/swagbike/api/";
-    public static final String SIGN_UP= BASE_URL+"login/verify/";
-    public static final String SEND_OTP = BASE_URL+"login/sendOtp/";
-    public static final String SIGN_IN= BASE_URL+"login/login/";
-    public static final String UPDATE_PROFILE= BASE_URL+"cud/update_user/";
-
-
-    public static String Auth="8f3a07f4b8575c447078a203ff97d21806384458f8cfb3e4def94773dfc6077f62588383408be7c2";
+//    public static final String SIGN_UP= BASE_URL+"login/verify/";
+//    public static final String SEND_OTP = BASE_URL+"login/sendOtp/";
+//    public static final String SIGN_IN= BASE_URL+"login/login/";
+//    public static final String UPDATE_PROFILE= BASE_URL+"cud/update_user/";
+//
+//
+//    public static String Auth="8f3a07f4b8575c447078a203ff97d21806384458f8cfb3e4def94773dfc6077f62588383408be7c2";
 
     public static String GOOGLE_IMAGE_URL_PREFIX="https://maps.googleapis.com/maps/api/place/photo?maxwidth=150&photoreference=";
     public static String USERTYPE_CUSTOMER="customer";
@@ -35,7 +35,8 @@ public class AppConstant {
 
     public static final String RESULT_ADDRESS_KEY ="resultAddress" ;
     public static final String RESULT_PINCODE_KEY = "pinCOdeKey";
-    public static final String QB_PASSWORD = "nowUtterTss";
+    public static final String QB_PASSWORD = "nowSoortyTss";
     public static boolean IsChatScreen=false;
+    public static String IMAGES_LIST = "image_list";
 
 }

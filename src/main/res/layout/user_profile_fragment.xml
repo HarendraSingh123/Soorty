@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data  class="UserProfileBinding">
+        <variable
+            name="viewModel"
+            type="com.camellia.soorty.profile.viewmodel.UserProfileViewModel"
+            >
+        </variable>
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+      >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title_user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PROFILE"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="#222222"
+            android:fontFamily="@font/proxima_nova_bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.45" />
+        <RelativeLayout
+            android:id="@+id/rl_user_details_profile"
+            android:layout_width="match_parent"
+            android:layout_height="163dp"
+            android:background="#FFFFFF"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_user_profile">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_user_profile"
+                android:layout_width="77dp"
+                android:layout_height="77dp"
+                android:src="@drawable/user_profile_image"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/tv_user_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ronnie Jordan"
+                android:layout_alignBaseline="@+id/image_user_profile"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="108dp"
+                android:fontFamily="@font/sf_ui_display_bold"
+                android:textColor="#121314"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_user_email_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ronniejordan123@gmail.com"
+                android:layout_below="@+id/tv_user_name_profile"
+                android:layout_marginLeft="108dp"
+                android:textSize="12dp"
+                android:textColor="#4A4A4A"
+                android:fontFamily="@font/sf_ui_display_regular"
+                />
+
+            <TextView
+                android:id="@+id/tv_user_mobile_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="108dp"
+                android:textSize="12dp"
+                android:textColor="#4A4A4A"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:layout_below="@+id/tv_user_email_profile"
+                android:text="+971 9876543210"/>
+            <Button
+                android:id="@+id/btn_edit_profile_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_user_mobile_profile"
+                android:layout_marginLeft="108dp"
+                android:background="@drawable/btn_bacground_orange"
+                android:text="Edit Profile"
+                android:fontFamily="@font/sf_ui_display_semibold"
+                android:textSize="13dp"
+                android:onClick="onClick"
+                android:layout_marginTop="13dp"
+                />
+            <Button
+                android:id="@+id/btn_logout_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:layout_below="@+id/tv_user_mobile_profile"
+                android:layout_marginLeft="241dp"
+                android:fontFamily="@font/sf_ui_display_semibold"
+                android:textSize="13dp"
+                android:onClick="onClick"
+                android:layout_marginTop="13dp"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl1_extra_detsil_user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rl_user_details_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="13dp"
+            android:background="#FFFFFF"
+            >
+
+            <ImageView
+                android:id="@+id/image_my_orders_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/my_orders"
+                />
+
+            <TextView
+                android:id="@+id/tv_my_order_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Orders"
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_alignBaseline="@+id/image_my_orders_user_profile"
+                />
+
+            <ImageView
+                android:id="@+id/image1_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:onClick="onClick"
+                android:src="@drawable/profile_arrow"/>
+
+
+<View
+    android:id="@+id/horizontal_vew1_bellow_order_profile"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="15dp"
+    android:alpha="0.4"
+    android:layout_below="@+id/image_my_orders_user_profile"
+    android:background="@color/dark_gray"
+    >
+
+</View>
+            <ImageView
+                android:id="@+id/image_shiping_address_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/horizontal_vew1_bellow_order_profile"
+                android:src="@drawable/shiping_address"
+                />
+
+            <TextView
+                android:id="@+id/tv_shiping_address_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipping Address"
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_below="@+id/horizontal_vew1_bellow_order_profile"
+                android:layout_alignBaseline="@+id/image_shiping_address_user_profile"
+                />
+
+            <ImageView
+                android:id="@+id/image2_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/profile_arrow"
+                android:layout_below="@+id/horizontal_vew1_bellow_order_profile" />
+
+            <View
+                android:id="@+id/horizontal_vew2_bellow_order_profile"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:alpha="0.4"
+                android:layout_below="@+id/image_shiping_address_user_profile"
+                android:background="@color/dark_gray"
+                >
+            </View>
+
+            <ImageView
+                android:id="@+id/image_saved_cards_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/horizontal_vew2_bellow_order_profile"
+                android:src="@drawable/saved_cards"
+                />
+
+            <TextView
+                android:id="@+id/tv_saved_cards_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saved Cards"
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_below="@+id/horizontal_vew2_bellow_order_profile"
+                android:layout_alignBaseline="@+id/image_saved_cards_user_profile"
+                />
+
+            <ImageView
+                android:id="@+id/image3_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/profile_arrow"
+                android:layout_below="@+id/horizontal_vew2_bellow_order_profile"
+              />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2_extra_detsil_user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rl1_extra_detsil_user_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="13dp"
+            android:background="#FFFFFF"
+            >
+            <ImageView
+                android:id="@+id/image_refer_earn_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/refer_earn"
+                />
+
+            <TextView
+                android:id="@+id/tv_refer_earn_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_refer_and_earn"
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_alignBaseline="@+id/image_refer_earn_user_profile"
+                />
+
+            <ImageView
+                android:id="@+id/image4_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:onClick="onClick"
+                android:src="@drawable/profile_arrow"/>
+
+            <View
+                android:id="@+id/horizontal_vew4_bellow_order_profile"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:alpha="0.4"
+                android:layout_below="@+id/image_refer_earn_user_profile"
+                android:background="@color/dark_gray"
+                >
+            </View>
+
+            <ImageView
+                android:id="@+id/image_help_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/horizontal_vew4_bellow_order_profile"
+                android:src="@drawable/help"
+                />
+
+            <TextView
+                android:id="@+id/tv_help_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_below="@+id/horizontal_vew4_bellow_order_profile"
+                android:layout_alignBaseline="@+id/image_help_user_profile"
+                />
+
+            <ImageView
+                android:id="@+id/image5_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/profile_arrow"
+                android:layout_below="@+id/horizontal_vew4_bellow_order_profile" />
+
+
+            <View
+                android:id="@+id/horizontal_vew5_bellow_order_profile"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:alpha="0.4"
+                android:layout_below="@+id/image_help_user_profile"
+                android:background="@color/dark_gray"
+                >
+
+            </View>
+
+
+            <ImageView
+                android:id="@+id/image_about_us_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/horizontal_vew5_bellow_order_profile"
+                android:src="@drawable/about_us"
+                />
+
+            <TextView
+                android:id="@+id/tv_about_us_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_below="@+id/horizontal_vew5_bellow_order_profile"
+                android:layout_alignBaseline="@+id/image_about_us_user_profile"
+                />
+
+            <ImageView
+                android:id="@+id/image6_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/profile_arrow"
+                android:layout_below="@+id/horizontal_vew5_bellow_order_profile"
+               />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl3_extra_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl2_extra_detsil_user_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="13dp"
+            android:background="#FFFF">
+            <ImageView
+                android:id="@+id/image_contact_us_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/contact_us"
+                />
+            <TextView
+                android:id="@+id/tv_contact_us_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_alignBaseline="@+id/image_contact_us_user_profile"
+                />
+
+            <ImageView
+                android:id="@+id/image7_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/profile_arrow"/>
+
+            <View
+                android:id="@+id/horizontal_vew6_bellow_order_profile"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/image_contact_us_user_profile"
+                android:alpha="0.4"
+                android:layout_marginTop="15dp"
+                android:background="@color/dark_gray">
+            </View>
+
+            <ImageView
+                android:id="@+id/image_settings_user_profile"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/settings_icon"
+                android:tint="@color/colorAccent"
+                android:layout_below="@+id/horizontal_vew6_bellow_order_profile"
+                />
+            <TextView
+                android:id="@+id/tv_settings_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textSize="16dp"
+                android:textColor="#121314"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="52dp"
+                android:layout_below="@+id/horizontal_vew6_bellow_order_profile"
+                android:layout_alignBaseline="@+id/image_settings_user_profile" />
+
+            <ImageView
+                android:id="@+id/image9_right_arrow_order_user_profile"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:tint="@color/dark_gray"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/profile_arrow"
+                android:layout_below="@+id/horizontal_vew6_bellow_order_profile"
+              />
+            <View
+                android:id="@+id/horizontal_vew7_bellow_order_profile"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/image_settings_user_profile"
+                android:alpha="0.4"
+                android:layout_marginTop="15dp"
+                android:background="@color/dark_gray">
+            </View>
+
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</layout>

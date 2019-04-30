@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:overScrollMode="never"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_top_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:gravity="top">
+
+
+            <ImageView
+                android:id="@+id/img_back_sign_up"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:src="@drawable/back"
+                android:onClick="onClick"
+                tools:ignore="ContentDescription"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+               />
+            <TextView
+                android:id="@+id/tv_back_soorty_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_back_sign_up"
+                android:onClick="onClick"
+                android:text="Back"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sf_ui_display_semibold"
+                android:textColor="#000"
+                android:textSize="@dimen/medium_textSize"/>
+
+            <TextView
+                android:id="@+id/tv_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:fontFamily="@font/sf_ui_display_semibold"
+                android:gravity="center"
+                android:text="SIGN UP"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                android:textColor="#222222"
+                android:textSize="@dimen/normal_textSize" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_view_line"
+                android:alpha="0.4"
+                android:layout_alignParentBottom="true">
+
+            </View>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_enter_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_please_enter_details"
+                app:layout_constraintTop_toBottomOf="@+id/rl_top_sign_up"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/colorblack"
+                android:fontFamily="@font/sf_ui_display_semibold"
+                android:layout_marginTop="16dp"
+                android:textSize="26dp" />
+
+            <View
+                android:id="@+id/view_horizontal_bello_enter_details"
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_enter_details"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintLeft_toLeftOf="parent">
+            </View>
+
+            <EditText
+                android:id="@+id/et_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="First Name"
+                android:inputType="text"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:textColor="@color/colorAccent"
+                android:drawableLeft="@drawable/first_last_name"
+                android:textColorHint="@color/colorblack"
+                android:textCursorDrawable="@null"
+                android:drawableTint="@color/colorAccent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_horizontal_bello_enter_details"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                />
+
+            <EditText
+                android:id="@+id/et_last_name_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+                android:textCursorDrawable="@null"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorblack"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:drawableLeft="@drawable/first_last_name"
+                android:drawableTint="@color/colorAccent"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:drawablePadding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/et_first_name"
+                />
+
+
+            <EditText
+                android:id="@+id/et_email_addresss_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Email"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorblack"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:drawableLeft="@drawable/email"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:inputType="textEmailAddress"
+                app:layout_constraintTop_toBottomOf="@+id/et_last_name_sign_up"
+                />
+
+
+            <EditText
+                android:id="@+id/tv_mobile_number__cc_sign_up"
+                android:layout_width="115dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/phone_number"
+                android:ems="10"
+                android:paddingRight="10dp"
+                android:enabled="false"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:inputType="number"
+                android:text="+971"
+                android:textAlignment="center"
+                android:drawableTint="@color/colorAccent"
+                android:textSize="20dp"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_email_addresss_sign_up" />
+
+            <EditText
+                android:id="@+id/et_mobile_number_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="5dp"
+                android:ems="8"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:textCursorDrawable="@null"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorblack"
+                android:maxLength="9"
+                app:layout_constraintLeft_toRightOf="@+id/tv_mobile_number__cc_sign_up"
+                app:layout_constraintTop_toBottomOf="@+id/et_last_name_sign_up"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_mobile_number__cc_sign_up" />
+
+            <EditText
+                android:id="@+id/et_passwrod_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:hint="Password"
+                android:textCursorDrawable="@null"
+                android:inputType="textPassword"
+                android:drawableTint="@color/colorAccent"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorblack"
+                android:drawableLeft="@drawable/password"
+                app:layout_constraintTop_toBottomOf="@+id/tv_mobile_number__cc_sign_up"
+                app:layout_constraintVertical_bias="0.0"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/sf_ui_display_regular"
+                />
+            <TextView
+                android:id="@+id/tv_show_password_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                app:layout_constraintLeft_toRightOf="@+id/et_passwrod_sign_up"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_mobile_number_sign_up"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="35dp"
+                android:textColor="@color/colorAccent"
+                android:onClick="onClick"
+                />
+            <CheckBox
+                android:id="@+id/check_agree_tnc_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorblack"
+                app:layout_constraintTop_toBottomOf="@+id/et_passwrod_sign_up"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:button="@drawable/circle"
+                android:buttonTint="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/tv_agree_tnc_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack"
+                app:layout_constraintTop_toBottomOf="@+id/et_passwrod_sign_up"
+                app:layout_constraintLeft_toRightOf="@+id/check_agree_tnc_sign_up"
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:text="Agree to our " />
+
+            <TextView
+                android:id="@+id/tv_terms_anc_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorblack"
+                app:layout_constraintTop_toBottomOf="@+id/et_passwrod_sign_up"
+                app:layout_constraintLeft_toRightOf="@+id/tv_agree_tnc_sign_up"
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:onClick="onClick"
+                android:text="Terms and Condition" />
+
+            <Button
+                android:id="@+id/signup_signupButton"
+                android:onClick="onClick"
+                android:layout_width="305dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="30dp"
+                android:text="Sign up"
+                app:cornerRadius="25dp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_terms_anc_conditions"
+                app:layout_constraintVertical_bias="0.28"
+                android:background="#FF7D01"
+                />
+
+            <View
+                android:id="@+id/view_seperateor1_or_text_sign_up"
+                android:layout_width="80dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="86dp"
+                android:background="@color/colorgray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signup_signupButton"
+                app:layout_constraintVertical_bias="0.28"
+                android:layout_marginTop="25dp"
+                ></View>
+
+            <TextView
+                android:id="@+id/tv_or_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/view_seperateor1_or_text_sign_up"
+                app:layout_constraintTop_toBottomOf="@+id/signup_signupButton"
+                app:layout_constraintVertical_bias="0.28"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:fontFamily="@font/sf_ui_display_bold"
+                />
+
+            <View
+                android:id="@+id/view_seperateor2_or_text_sign_up"
+                android:layout_width="80dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/colorgray"
+                app:layout_constraintLeft_toRightOf="@+id/tv_or_sign_up"
+                app:layout_constraintTop_toBottomOf="@+id/signup_signupButton"
+                app:layout_constraintVertical_bias="0.28"
+                android:layout_marginTop="25dp"
+                >
+
+            </View>
+
+            <!-- <ImageView
+                android:id="@+id/imageView_gplushlogin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/google_plus"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_seperateor2_or_text_sign_up"
+                android:onClick="onClick" />
+            <ImageView
+                android:id="@+id/imageView_faceboklogin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/facebook"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toRightOf="@+id/imageView_gplushlogin"
+                app:layout_constraintTop_toBottomOf="@+id/view_seperateor2_or_text_sign_up"
+                android:onClick="onClick" />-->
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/materialButtong_google"
+                android:layout_width="145dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_shape_btn"
+                android:backgroundTint="#FF4342"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Google"
+                android:paddingLeft="25dp"
+                android:paddingRight="30dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_textSize"
+                app:cornerRadius="25dp"
+                app:iconSize="16dp"
+                app:iconGravity="start"
+                app:icon="@drawable/google_plus_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_seperateor1_or_text_sign_up" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/materialButtong_facebook"
+                android:layout_width="145dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_facebook_icon"
+                android:backgroundTint="#3F50B8"
+                android:fontFamily="@font/sf_ui_display_medium"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="30dp"
+                android:text="Facebook"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:cornerRadius="25dp"
+                app:iconSize="15dp"
+                app:icon="@drawable/ic_facebook_icon"
+                android:firstBaselineToTopHeight="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/materialButtong_google"
+                app:layout_constraintTop_toBottomOf="@+id/view_seperateor1_or_text_sign_up" />
+            <View
+                android:id="@+id/horizontal_view_bottom_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.4"
+                android:background="@color/colorgray"
+                app:layout_constraintVertical_bias="0.28"
+                app:layout_constraintTop_toBottomOf="@+id/materialButtong_google">
+            </View>
+            <TextView
+                android:id="@+id/tv_already_have_account_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Already have an account?"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_view_bottom_sign_up"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:textColor="#121314"
+                android:textSize="16dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="36dp" />
+            <TextView
+                android:id="@+id/tv_sign_in_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:textColor="#FF7D01"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:onClick="onClick"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_view_bottom_sign_up"
+                app:layout_constraintLeft_toRightOf="@+id/tv_already_have_account_sign_up"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_already_have_account_sign_up"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingBottom="10dp"
+                />
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

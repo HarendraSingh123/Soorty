@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+    <data class="TncBinding">
+
+        <variabl
+            name="viewModel"
+            type="com.camellia.soorty.tnc.viewmodel.Tncviewmodel">
+        </variabl>
+
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_top__tnc"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:gravity="top">
+            <ImageView
+                android:id="@+id/img_back_tnc"
+                android:layout_width="26dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"
+                />
+            <TextView
+                   android:id="@+id/tv_back_tnc"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Back"
+                   android:layout_toRightOf="@+id/img_back_tnc"
+                   android:layout_centerVertical="true"
+                   android:textSize="14dp"
+                   android:textColor="#222222"
+                   android:fontFamily="@font/proxima_nova_regular" />
+
+            <TextView
+                android:id="@+id/tv_title_tnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TERMS AND CONDITIONS"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:textColor="#222222"
+                android:textSize="16dp"
+                />
+
+            <View
+                android:id="@+id/top_sep_tnc"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_view_line"
+                android:layout_alignParentBottom="true"
+                android:alpha="0.4"
+                >
+            </View>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_1_tnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_top__tnc"
+            android:layout_marginTop="17dp"
+            android:text="@string/text_1_terms_and_conditions"
+            android:textSize="14dp"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#222222"
+            android:layout_marginLeft="20dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_2_tnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1_tnc"
+            android:layout_marginTop="17dp"
+            android:text="@string/text_2_terms_and_conditions"
+            android:textSize="14dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#222222" />
+
+
+        <TextView
+            android:id="@+id/tv_3_tnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_2_tnc"
+            android:layout_marginTop="17dp"
+            android:text="@string/text_3_terms_and_conditions"
+            android:textSize="14dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#222222" />
+
+        <TextView
+            android:id="@+id/tv_4_tnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_3_tnc"
+            android:layout_marginTop="17dp"
+            android:text="@string/text_4_terms_and_conditions"
+            android:textSize="14dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#222222" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
+
+
+

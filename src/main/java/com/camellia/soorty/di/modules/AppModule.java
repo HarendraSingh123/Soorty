@@ -18,7 +18,6 @@ public class AppModule {
     Application provideContext(MyApplication application){
         return application;
     }
-
     @Provides
     @Singleton
     MyAppPref providePreference(Application application){

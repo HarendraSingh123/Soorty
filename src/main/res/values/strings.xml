@@ -21,7 +21,7 @@
     <string name="reviews">Reviews</string>
     <string name="menu_more">More</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="your_name">Your Name</string>
     <string name="lastly_we_need">Lastly we need your few more following details to get started.</string>
@@ -84,5 +84,86 @@
     <string name="no_active_user">No Active user found at this time.</string>
     <string name="no_chat_history">No chat history found at this time.</string>
     <string name="by_signing_up_you_agree_to_utternow_s">By Signing up you agree to UtterNow\'s Terms and condition</string>
+
+    //network error
+    <string name="something_went_wrong_try_again">Something Went Wrong ,Try Later</string>
+    <string name="internal_server_error">Internal Server Error Found</string>
+
+
+    //enter otp strings
+
+    <string name="text_enter_otp">Enter the code sent to \ registered email &amp; \nmobile number</string>
+    <string name="resend_code">Resent Code</string>
+
+
+    //splash strings
+    <string name="next">Next</string>
+    <string name="text_choos_splash">Lorem Ipsum is simply dummy text \nof the printing and typesetting \nindustry orem Ipsum</string>
+    <string name="text_select_splash">Duis aute irure dolor in reprehenderit \nin volu ptate velit esse cillum dolore \neu fugiat nulla pariatur</string>
+    <string name="text_design_splash">Lorem ipsum dolor sit amet, conete \n tur sadips cing elitr, sed diam nou \n  my eirmod tempor invidunt</string>
+    <string name="text_order_splash">Sed ut perspiciatis unde omnis iste \natus error sit voluptatem accusa \nntium doloremque</string>
+
+
+    //select photos strings
+    <string name="text_want_to_access_photos">Want to access your photos? Just log in \nand choose your favourite memories!</string>
+
+    //string refer and earn
+    <string name="text_refer_and_earn">Refer &amp; earn</string>
+
+
+    //string of terms and conditions
+
+    <string name="text_1_terms_and_conditions">1. Offer valid only when total order value is AED 700 or more.</string>
+    <string name="text_2_terms_and_conditions">2. You can apply only one coupon at a time.</string>
+    <string name="text_3_terms_and_conditions">3. This offer can not be combined with other offers.</string>
+    <string name="text_4_terms_and_conditions">4. Coupon valid only till the date mentioned.</string>
+
+
+    //drona new string
+
+    <string name="pincode">Pincode*</string>
+    <string name="locality">Locality, area or street*</string>
+    <string name="flat_house">Flat/House No/ Floor/ Building*</string>
+    <string name="city">City*</string>
+    <string name="state">State*</string>
+    <string name="landmark">Landmark(optional)</string>
+    <string name="name">Name*</string>
+    <string name="phon_no_10_digit">10-digit mobile number*</string>
+    <string name="alternet_phone">Alternet Phone Number(Optional)</string>
+
+
+    <string name="add_address">Change Or Add Address</string>
+
+    <string name="connect_google">Connect Google Photos</string>
+    <string name="connect_dropbox">Connect to Dropbox</string>
+    <string name="shipping_address">SHIPPING ADDRESS</string>
+    <string name="add_new_address">ADD NEW ADDRESS</string>
+    <string name="tap_to_auto_fill">Tap to auto fill address fields</string>
+
+
+    <string name="photo_print">Photo Print</string>
+    <string name="paper_size">Paper Size</string>
+    <string name="price_details">PRICE DETAILS</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="total">Total</string>
+    <string name="continue_text">Continue</string>
+    <string name="shipping_charge">Shipping Charges</string>
+    <string name="paper_type">Paper Type</string>
+    <string name="paper_thickness">Paper Thickness</string>
+    <string name="photo_prints">PHOTO PRINTS</string>
+    <string name="back">Back</string>
+    <string name="all_photos">ALL PHOTOS</string>
+    <string name="add_to_cart">Add to Cart</string>
+
+
+    <string name="satin_finish">Satin Finish</string>
+    <string name="signature_matte">Signature Matte</string>
+    <string name="pearl_finish">Pearl Finish</string>
+    <string name="premium_matte">Premium Matte</string>
+
+
+    //refer and earn strings
+    <string name="text_ref_earn_details">Invite your friend to join soorty and get \n10% discount for each friend that joins \nusing your referral code</string>
+
 
 </resources>

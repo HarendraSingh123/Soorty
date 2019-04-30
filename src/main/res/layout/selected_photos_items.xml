@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/text_size18"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_image1"
+                    android:layout_width="170dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/image2" />
+
+                <ImageView
+                    android:id="@+id/iv_dec_pics"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/iv_image1"
+                    android:layout_marginTop="18dp"
+                    app:srcCompat="@drawable/demo_icon" />
+
+                <TextView
+                    android:id="@+id/iv_quantity"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/iv_image1"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@+id/iv_dec_pics"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/colorBlack_b4"
+                    android:textSize="@dimen/margin16"
+                    app:srcCompat="@drawable/demo_icon" />
+
+                <ImageView
+                    android:id="@+id/iv_add_pics"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/iv_image1"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@+id/iv_quantity"
+                    app:srcCompat="@drawable/demo_icon" />
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/iv_image1"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@+id/iv_add_pics"
+                    app:srcCompat="@drawable/demo_icon" />
+
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/iv_image1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@+id/iv_edit"
+                    app:srcCompat="@drawable/demo_icon" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_layout"
+        android:background="@color/colorGrey_b2" />
+
+</RelativeLayout>

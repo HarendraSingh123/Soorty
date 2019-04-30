@@ -1,0 +1,17 @@
+package com.camellia.soorty.activities;
+
+
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.camellia.soorty.R;
+
+public class ReferAndEarnActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_refer_and_earn);
+    }
+}

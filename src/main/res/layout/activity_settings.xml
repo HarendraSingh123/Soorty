@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".activities.SettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_settings"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="top">
+
+        <ImageView
+            android:id="@+id/iv_back_settings"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_back_photo_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#222222"
+            android:text="Back"
+            android:layout_toRightOf="@+id/iv_back_settings"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/sf_ui_display_regular"
+            />
+        <TextView
+            android:id="@+id/tv_titile_photo_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:text="SETTINGS"
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:textColor="#222222"
+            />
+
+        <View
+            android:id="@+id/sep_view_top_settings"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_view_line">
+        </View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_notifications_settings"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="@dimen/text_size16"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_settings">
+
+        <TextView
+            android:id="@+id/tv_notifications_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textSize="14dp"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:textColor="#121314"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:layout_marginTop="@dimen/text_size16"
+            />
+
+        <Switch
+            android:id="@+id/btn_switch_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size16"
+            android:layout_alignParentRight="true"
+            android:buttonTint="@color/colorAccent"
+            />
+
+        <View
+            android:id="@+id/sep_view_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_view_line"
+            android:layout_below="@+id/tv_notifications_settings"
+            android:layout_marginTop="@dimen/text_size16"
+            ></View>
+
+        <TextView
+            android:id="@+id/tv_change_password_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sep_view_notifications"
+            android:layout_marginTop="@dimen/text_size16"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:fontFamily="@font/sf_ui_display_medium"
+            android:textSize="@dimen/text_size14"
+            android:text="Change Password"
+            android:textColor="#121314" />
+<ImageView
+    android:id="@+id/image_next_settings"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/sep_view_notifications"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="16dp"
+    android:src="@drawable/profile_arrow" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_social_accounts"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/text_size16"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/rl_notifications_settings"
+        >
+        <TextView
+            android:id="@+id/tv_social_accounts_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size16"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:text="SOCIAL ACCOUNTS" />
+
+        <View
+
+            android:id="@+id/sep_view_social_settings"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_view_line"
+            android:layout_below="@+id/tv_social_accounts_settings"
+            android:layout_marginTop="@dimen/margin15"></View>
+
+        <TextView
+            android:id="@+id/tv_google_photo_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin15"
+            android:layout_below="@+id/sep_view_social_settings"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:text="Google Photo"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#222222"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_google_photo_logout_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin15"
+            android:layout_below="@+id/sep_view_social_settings"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:layout_alignParentRight="true"
+            android:text="logout"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="@color/colorAccent"
+            />
+
+
+        <View
+            android:id="@+id/sep_view_gp_settings"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_view_line"
+            android:layout_below="@+id/tv_google_photo_settings"
+            android:layout_marginTop="@dimen/margin15"></View>
+
+        <TextView
+            android:id="@+id/tv_drop_box_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin15"
+            android:layout_below="@+id/sep_view_gp_settings"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:text="Dropbox"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#222222"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_dropbox_logout_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin15"
+            android:layout_below="@+id/sep_view_gp_settings"
+            android:layout_marginLeft="@dimen/text_size16"
+            android:layout_alignParentRight="true"
+            android:text="logout"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="@color/colorAccent"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

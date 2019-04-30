@@ -23,8 +23,4 @@ public abstract class LoginFragmentBuilder {
     abstract SignUp_Fragment signUp_fragment();
 
 
-
-
-
-
 }

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F5F5F5"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditProfileActivty">
+    <Toolbar
+        android:id="@+id/toolbar_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:gravity="top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/image_back_edit_profile"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back"
+            android:onClick="onClick"
+            />
+        <TextView
+            android:id="@+id/tv_back_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="14dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EDIT PROFILE"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textColor="#222222">
+        </TextView>
+    </Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl1_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:background="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_edit_profile">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="#E8E8E8"></View>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp">
+
+            <ImageView
+                android:id="@+id/image_user_profile"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/user_profile_image" />
+
+            <ImageView
+                android:id="@+id/image_camera_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/camera_icon" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="372dp"
+        android:background="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl1_edit_profile"
+        android:layout_marginTop="13dp">
+
+        <TextView
+            android:id="@+id/tv_first_name_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#2962FF"
+            />
+
+        <TextView
+            android:id="@+id/tv_last_name_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:layout_marginTop="18dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#2962FF"
+            android:layout_marginLeft="196dp"/>
+        <EditText
+            android:id="@+id/et_first_name_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:ems="5"
+            android:text="Ronnie"
+            android:textColor="#121314"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:layout_below="@+id/tv_first_name_edit_profile" />
+        <EditText
+            android:id="@+id/et_last_name_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_last_name_edit_profile"
+            android:ems="5"
+            android:layout_marginLeft="196dp"
+            android:text="Jordan"
+            android:textColor="#121314"
+            android:fontFamily="@font/sf_ui_display_regular"
+            />
+
+        <TextView
+            android:id="@+id/tv_email_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/et_first_name_edit_profile"
+            android:layout_marginLeft="16dp"
+            android:textColor="#2962FF"
+            android:fontFamily="@font/sf_ui_display_regular"
+            />
+
+        <EditText
+            android:id="@+id/et_email_addresss_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_email_edit_profile"
+            android:layout_marginRight="16dp"
+            android:hint="ronniejordan123@gmail.com"
+            android:layout_marginLeft="16dp">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_gender_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_below="@+id/et_email_addresss_edit_profile"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="35dp"
+            android:textColor="#2962FF"
+            android:fontFamily="@font/sf_ui_display_regular">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/rg_gender_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_gender_edit_profile"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/rb_male_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#222222"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:buttonTint="@color/colorAccent"
+                android:paddingLeft="10dp"
+                android:textSize="16dp"
+                />
+            <RadioButton
+                android:id="@+id/rb_female_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:layout_marginTop="16dp"
+                android:textColor="#222222"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:buttonTint="@color/colorAccent"
+                android:paddingLeft="10dp"
+                android:textSize="16dp"
+                android:layout_marginLeft="50dp"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_update_profile"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Update Profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:onClick="onClick"
+        android:layout_marginBottom="20dp"
+        android:textSize="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

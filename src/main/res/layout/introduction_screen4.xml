@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/intro_screen_4_bg"
+        android:scaleType="fitXY"
+        android:id="@+id/bg_first_splash" />
+    <android.support.v7.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="225dp"
+        android:background="@drawable/cardbackground"
+        android:layout_marginLeft="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="68dp"
+        app:cardCornerRadius="5dp">
+
+        <TextView
+            android:id="@+id/tv_intro_design_splash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORDER"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textSize="26dp"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:textColor="#121314" />
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorAccent">
+        </View>
+
+        <TextView
+            android:id="@+id/tv_intro_text_design_splash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_design_splash"
+            android:layout_marginTop="75dp"
+            android:layout_marginLeft="32dp"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:textColor="#4A4A4A"
+            android:textSize="16dp"  />
+
+        <ImageView
+            android:id="@+id/img_back_order_splash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_long_new"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="25dp"
+            android:tint="@color/colorAccent"
+            />
+        <TextView
+            android:id="@+id/tv_continue_order_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:text="CONTINUE"
+            android:textSize="16dp"
+            android:fontFamily="@font/sf_ui_display_semibold"
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="35dp"
+            android:layout_gravity="bottom|end"
+            android:tint="@color/colorAccent"
+            android:layout_marginRight="25dp"
+            />
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

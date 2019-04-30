@@ -6,12 +6,214 @@
     android:orientation="vertical"
     >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <TextView
-        android:id="@+id/tv_home_fragment"
+        android:id="@+id/tv_title_categories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is Categories Fragment"
+        android:text="CATEGORIES"
+        android:fontFamily="@font/semibold"
+        android:textColor="#222222"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/medium_textSize" />
 
-        />
+        <View
+            android:id="@+id/horizontal_view_top_categories"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tv_title_categories"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+        <TextView
+            android:id="@+id/tv_all_categories_cat_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26dp"
+            android:layout_below="@+id/horizontal_view_top_categories"
+            android:fontFamily="@font/semibold"
+            android:textColor="#222222"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="All Categories"/>
+
+        <View
+            android:id="@+id/horizontal_view_2_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_all_categories_cat_screen"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+
+        <TextView
+            android:id="@+id/tv_photo_print_cat_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/regular"
+            android:layout_below="@+id/horizontal_view_2_categories"
+
+            android:textColor="#222222"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Photo Print"/>
+
+        <View
+            android:id="@+id/horizontal_view_3_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_photo_print_cat_screen"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+        <TextView
+            android:id="@+id/tv_photo_books_cat_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/regular"
+            android:layout_below="@+id/horizontal_view_3_categories"
+
+            android:textColor="#222222"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Photobooks"/>
+
+        <View
+            android:id="@+id/horizontal_view_4_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_photo_books_cat_screen"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+        <TextView
+            android:id="@+id/tv_cards_cat_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/regular"
+            android:layout_below="@+id/horizontal_view_4_categories"
+
+            android:textColor="#222222"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Cards"/>
+
+        <ImageView
+            android:id="@+id/imgnext_arrow_cat_screen"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:tint="@color/dark_gray"
+            android:layout_below="@+id/horizontal_view_4_categories"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/next_long"/>
+
+        <View
+            android:id="@+id/horizontal_view_5_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_cards_cat_screen"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+        <TextView
+            android:id="@+id/tv_calendar_cat_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/regular"
+            android:layout_below="@+id/horizontal_view_5_categories"
+            android:textColor="#222222"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Calendars"/>
+
+        <ImageView
+            android:id="@+id/imgnext_arrow2_cat_screen"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:tint="@color/dark_gray"
+            android:layout_below="@+id/horizontal_view_5_categories"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/next_long"/>
+
+        <View
+            android:id="@+id/horizontal_view_6_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_calendar_cat_screen"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+        <TextView
+            android:id="@+id/tv_gift_cat_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/regular"
+            android:layout_below="@+id/horizontal_view_6_categories"
+            android:textColor="#222222"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Gift"/>
+
+        <ImageView
+            android:id="@+id/imgnext_arrow3_cat_screen"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:tint="@color/dark_gray"
+            android:layout_below="@+id/horizontal_view_6_categories"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/next_long"/>
+
+        <View
+            android:id="@+id/horizontal_view_7_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_gift_cat_screen"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+        <TextView
+            android:id="@+id/tv_comercial_cat_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:fontFamily="@font/regular"
+            android:layout_below="@+id/horizontal_view_7_categories"
+            android:textColor="#222222"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Commercial"/>
+
+        <ImageView
+            android:id="@+id/imgnext_arrow4_cat_screen"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:tint="@color/dark_gray"
+            android:layout_below="@+id/horizontal_view_7_categories"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/next_long"/>
+
+        <View
+            android:id="@+id/horizontal_view_8_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_comercial_cat_screen"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorgray"></View>
+
+
+
+    </RelativeLayout>
 
 </LinearLayout>

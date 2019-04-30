@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="SelectPhotoFragmentBinding">
+
+        <variable
+            name="viewModel"
+            type="com.camellia.soorty.selectphotos.viewmodel.SelectPhotosViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_select_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            tools:ignore="MissingConstraints">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/bt_next_botom_select_photos"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorOrange"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            />
+        <TextView
+            android:id="@+id/myImageViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bt_next_botom_select_photos"
+            android:layout_alignTop="@+id/bt_next_botom_select_photos"
+            android:layout_alignRight="@+id/bt_next_botom_select_photos"
+            android:layout_alignBottom="@+id/bt_next_botom_select_photos"
+            android:layout_margin="1dp"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/colorWhite" />
+
+
+    </RelativeLayout>
+</layout>

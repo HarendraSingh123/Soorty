@@ -3,7 +3,7 @@ package com.camellia.soorty.login.model;
 
 
 import com.camellia.soorty.Repos.MyAppPref;
-import com.camellia.soorty.di.ApiInterface;
+import com.camellia.soorty.REST.ApiInterface;
 
 import dagger.Module;
 import dagger.Provides;
@@ -14,7 +14,5 @@ public class DISignInModule {
     public SignInModel provideSignInModel(ApiInterface apiInterface, MyAppPref myAppPref){
         return new SignInModel(apiInterface,myAppPref);
     }
-
-
 
 }

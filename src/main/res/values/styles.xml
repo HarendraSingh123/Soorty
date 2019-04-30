@@ -8,18 +8,19 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorSecondary">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">@color/colorAccent</item>
 
     </style>
     <style name="AppTheme.NoActionBar">
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:textColorPrimary">@color/black80_opacity</item>
+        <item name="android:textColorPrimary">@color/colorblack</item>
     </style>
 
 
 
-    <style name="XXXXXXAppTheme" parent="@style/Theme.MaterialComponents.Light.DarkActionBar"></style>
+
     <!--<style name="AppBaseTheme" parent="android:Theme.Light">
         &lt;!&ndash;
             Theme customizations available in newer API levels can go in
@@ -34,10 +35,10 @@
 
     <style name="AppThemeForHome" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@android:color/transparent</item>
-        <item name="colorPrimaryDark">@android:color/transparent</item>
-        <item name="colorAccent">@android:color/transparent</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@android:color/black</item>
+
     </style>
 
 
@@ -52,10 +53,6 @@
         <item name="colorPrimaryDark">@color/act_background_color</item>
         <item name="colorAccent">@android:color/transparent</item>
     </style>
-
-
-
-
 
     <style name="TransparentProgressDialog" parent="AlertDialog.AppCompat">
         <item name="android:windowFrame">@null</item>

@@ -12,22 +12,27 @@
     </data>
 
 
-    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
+        android:overScrollMode="never"
         tools:context=".login.views.Login">
 
+        <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
         <ImageView
-            android:id="@+id/logo"
+            android:id="@+id/sign_in_bg"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/sign_in_background"
             tools:ignore="ContentDescription"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintHorizontal_bias="0.47" />
-
 
         <TextView
             android:id="@+id/tv_welcome_to_soorty"
@@ -35,15 +40,15 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_bg"
             app:layout_constraintVertical_bias="0.0"
             android:layout_marginLeft="20dp"
             android:gravity="left"
             android:text="Welcome to Soorty"
-            android:fontFamily="@font/fontawesome_regular"
+            android:fontFamily="@font/sf_ui_display_semibold"
             android:textColor="#000"
             android:textSize="25dp"/>
 
@@ -53,29 +58,31 @@
             android:layout_height="4dp"
             android:layout_marginBottom="0dp"
             android:layout_marginRight="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="10dp"
             android:background="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginLeft="20dp"
             app:layout_constraintTop_toBottomOf="@+id/tv_welcome_to_soorty"
             app:layout_constraintVertical_bias="0.0"
            />
 
         <EditText
-            android:id="@+id/login_usernameTextField"
+            android:id="@+id/login_useremailTextField"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="Email"
             android:inputType="textPersonName"
             android:textColor="@color/colorAccent"
-            android:drawableLeft="@mipmap/ic_launcher"
+            android:drawableLeft="@drawable/email"
             android:textColorHint="@color/colorblack"
             android:textCursorDrawable="@null"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:drawableTint="@color/colorAccent"
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -83,38 +90,52 @@
             android:drawablePadding="10dp"
             />
 
-        <EditText
+            <EditText
             android:id="@+id/login_passwordTextField"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableTint="@color/colorAccent"
             android:ems="10"
             android:hint="Soorty Password"
-            android:textCursorDrawable="@null"
             android:inputType="textPassword"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorblack"
+            android:textCursorDrawable="@null"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="283dp"
+            android:fontFamily="@font/sf_ui_display_regular"
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:drawableLeft="@mipmap/ic_launcher"
-            android:drawablePadding="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/login_usernameTextField"
-           />
-
+            app:layout_constraintTop_toBottomOf="@+id/login_useremailTextField"
+            />
+            <TextView
+                android:id="@+id/tv_show_password_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                app:layout_constraintLeft_toRightOf="@+id/login_passwordTextField"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_useremailTextField"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/colorAccent"
+                android:onClick="onClick"
+                />
 
         <Switch
             android:id="@+id/switch_remember_me_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:checked="true"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@+id/login_passwordTextField"
-            tools:layout_editor_absoluteX="18dp"
-            tools:layout_editor_absoluteY="371dp"
             android:layout_marginLeft="20dp"
+            android:track="@drawable/switch_bg"
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -126,6 +147,8 @@
             app:layout_constraintLeft_toRightOf="@+id/switch_remember_me_sign_in"
             android:layout_marginTop="18dp"
             android:layout_marginLeft="10dp"
+            android:textColor="#121314"
+            android:fontFamily="@font/proxima_nova_regular"
             android:text="Remember Me?"/>
 
         <TextView
@@ -135,10 +158,11 @@
             android:layout_marginRight="25dp"
             android:gravity="right"
             android:text="Forgot Password ?"
+            android:textColor="#121314"
+            android:fontFamily="@font/proxima_nova_regular"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_remember_me_sign_in"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_passwordTextField" />
-
 
 
         <Button
@@ -158,20 +182,20 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintVertical_bias="0.28"
             android:background="#FF7D01"
+            android:fontFamily="@font/sf_ui_display_medium"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp" />
-
 
         <View
             android:id="@+id/view_seperateor1_or_text_sign_in"
             android:layout_width="80dp"
-            android:layout_height="4dp"
-            android:layout_marginLeft="86dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="82dp"
             android:background="@color/colorgray"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_loginButton"
             app:layout_constraintVertical_bias="0.28"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             ></View>
 
         <TextView
@@ -180,67 +204,96 @@
             android:layout_height="wrap_content"
             android:text="OR"
             android:layout_marginLeft="12dp"
+            android:fontFamily="@font/sf_ui_display_bold"
             app:layout_constraintLeft_toRightOf="@+id/view_seperateor1_or_text_sign_in"
             app:layout_constraintTop_toBottomOf="@+id/login_loginButton"
             app:layout_constraintVertical_bias="0.28"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="4dp"
+            android:textSize="16dp"
             android:gravity="center"
             />
 
         <View
             android:id="@+id/view_seperateor2_or_text_sign_in"
             android:layout_width="80dp"
-            android:layout_height="4dp"
+            android:layout_height="2dp"
             android:layout_marginLeft="10dp"
             android:background="@color/colorgray"
             app:layout_constraintLeft_toRightOf="@+id/tv_or_sign_in"
             app:layout_constraintTop_toBottomOf="@+id/login_loginButton"
             app:layout_constraintVertical_bias="0.28"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             ></View>
+
+       <!-- <ImageView
+            android:id="@+id/imageView_gplushlogin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/google_plus"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_seperateor1_or_text_sign_in"
+            android:onClick="onClick" />
+
+
+        <ImageView
+            android:id="@+id/imageView_faceboklogin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/facebook"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/imageView_gplushlogin"
+            app:layout_constraintTop_toBottomOf="@+id/view_seperateor1_or_text_sign_in"
+            android:onClick="onClick" />-->
 
 
         <android.support.design.button.MaterialButton
             android:id="@+id/materialButtong_google"
-            android:layout_width="150dp"
-            android:layout_height="51dp"
+            android:layout_width="145dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="36dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/round_shape_btn"
+            android:background="@drawable/google_plus"
             android:backgroundTint="#FF4342"
             android:fontFamily="@font/fontawesome_regular"
             android:gravity="center_vertical|center_horizontal"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:text="Google"
             android:textAllCaps="false"
             android:textColor="@color/white"
+            android:paddingLeft="25dp"
+            android:paddingRight="35dp"
             android:textSize="@dimen/small_textSize"
             app:cornerRadius="25dp"
-            app:icon="@drawable/ic_google_icon"
+            app:icon="@drawable/google_plus_icon"
+            app:iconSize="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_seperateor1_or_text_sign_in" />
 
 
         <android.support.design.button.MaterialButton
             android:id="@+id/materialButtong_facebook"
-            android:layout_width="150dp"
-            android:layout_height="55dp"
+            android:layout_width="145dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/round_shape_btn"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/facebook"
             android:backgroundTint="#3F50B8"
             android:fontFamily="@font/fontawesome_regular"
             android:text="Facebook"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:paddingLeft="2dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="30dp"
             android:textSize="@dimen/small_textSize"
             app:cornerRadius="25dp"
             app:icon="@drawable/ic_facebook_icon"
+            app:iconSize="15dp"
            app:layout_constraintLeft_toRightOf="@+id/materialButtong_google"
             app:layout_constraintTop_toBottomOf="@+id/view_seperateor1_or_text_sign_in" />
-
 
         <View
             android:id="@+id/horizontal_view_bottom_sign_in"
@@ -251,22 +304,21 @@
             android:layout_marginTop="5dp"
             android:alpha="0.4"
             >
-
         </View>
 
 
         <TextView
-
             android:id="@+id/tv_don_not_have_account_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/horizontal_view_bottom_sign_in"
             android:layout_marginTop="5dp"
             android:text="Do not have an account?"
-            android:fontFamily="@font/regular"
+            android:fontFamily="@font/sf_ui_display_regular"
             android:textSize="@dimen/medium_textSize"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginLeft="60dp"
+            android:textColor="#121314"
             />
         <TextView
             android:id="@+id/tv_sign_up_sign_in"
@@ -275,14 +327,13 @@
             android:text="Sign up"
             android:textColor="#FF7D01"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@+id/horizontal_view_bottom_sign_in"
             app:layout_constraintLeft_toRightOf="@+id/tv_don_not_have_account_sign_in"
-           app:layout_constraintBaseline_toBaselineOf="@+id/tv_don_not_have_account_sign_in"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_don_not_have_account_sign_in"
             android:textSize="@dimen/medium_textSize"
+            android:fontFamily="@font/sf_ui_display_regular" />
 
-            />
-
-
-    </android.support.constraint.ConstraintLayout>
-
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
 </layout>

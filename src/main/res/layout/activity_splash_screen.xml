@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:text="SOORTY"
-        android:fontFamily="@font/bold"
+        android:fontFamily="@font/sf_ui_display_bold"
         android:textSize="32dp"
         android:textColor="@color/colorAccent"
         android:layout_centerHorizontal="true" />

@@ -11,11 +11,9 @@
 
     </data>
 
-
-
-   <android.support.v4.widget.NestedScrollView
+    <android.support.v4.widget.NestedScrollView
        android:layout_width="match_parent"
-    android:layout_height="match_parent"
+       android:layout_height="match_parent"
        android:background="@color/white"
        android:overScrollMode="never"
        tools:context=".login.views.Login">
@@ -197,6 +195,7 @@
             app:layout_constraintTop_toBottomOf="@+id/et_passwrod_sign_up"
             app:layout_constraintVertical_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
+            android:buttonTint="@color/colorAccent"
             />
 
 

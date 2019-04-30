@@ -8,7 +8,8 @@ import android.support.v4.app.FragmentManager;
 import com.android.databinding.library.baseAdapters.BR;
 import com.camellia.soorty.R;
 import com.camellia.soorty.Repos.MyAppPref;
-import com.camellia.soorty.databinding.LoginActivityBinding;
+
+import com.camellia.soorty.databinding.LoginBinding;
 import com.camellia.soorty.login.viewmodel.LoginViewModel;
 import com.camellia.soorty.utills.BaseActivity;
 
@@ -16,7 +17,7 @@ import com.camellia.soorty.utills.BaseActivity;
 import javax.inject.Inject;
 
 
-public class Login extends BaseActivity<LoginActivityBinding, LoginViewModel> {
+public class Login extends BaseActivity<LoginBinding, LoginViewModel> {
     private LoginViewModel loginViewModel;
 
     @Inject

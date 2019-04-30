@@ -4,7 +4,7 @@ package com.camellia.soorty.di.modules;
 
 import com.camellia.soorty.BuildConfig;
 import com.camellia.soorty.Repos.MyAppPref;
-import com.camellia.soorty.di.ApiInterface;
+import com.camellia.soorty.REST.ApiInterface;
 
 import java.util.concurrent.TimeUnit;
 
@@ -40,7 +40,8 @@ public class NetModule {
             String headerValue;
             if(myAppPref.getAccessToken()!=null){
                 headerValue=myAppPref.getAccessToken();
-            }else {
+            }
+            else {
                 headerValue=BuildConfig.Authorization;
             }
             //Log.e("my pref : "+myAppPref," header value : "+headerValue);
@@ -49,7 +50,6 @@ public class NetModule {
             return chain.proceed(newRequest);
         };
     }
-
 
     @Singleton
     @Provides
@@ -63,7 +63,6 @@ public class NetModule {
                 .addInterceptor(headerInterceptor)
                 .build();
     }
-
     @Singleton
     @Provides
     public Retrofit provideRetrofit(OkHttpClient okHttpClient) {

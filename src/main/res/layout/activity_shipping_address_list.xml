@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ShippingAddressListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:gravity="top"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_back_tnc"
+            android:layout_width="26dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_back_tnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_back_tnc"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="Back"
+            android:textColor="#222222"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_title_tnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:text="@string/shipping_address"
+            android:textColor="#222222"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.4"
+            android:background="@color/gray_view_line"></View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_layout"
+        android:gravity="top"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/iv_add_button"
+            android:layout_width="26dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/tv_Add_Address_text"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/add_blue_icon" />
+
+
+        <TextView
+            android:id="@+id/tv_Add_Address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/regular"
+            android:text="@string/add_new_address"
+            android:textColor="@color/colorBlue"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/view_add"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.4"
+            android:background="@color/gray_view_line"></View>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_add_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_add_address">
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

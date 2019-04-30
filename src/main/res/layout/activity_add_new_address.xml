@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ShippingAddressListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarheight"
+        android:gravity="top"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_back_tnc"
+            android:layout_width="26dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_back_tnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_back_tnc"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="Back"
+            android:textColor="#222222"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_title_tnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:text="@string/add_new_address"
+            android:textColor="#222222"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.4"
+            android:background="@color/gray_view_line"></View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_use_current"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbarheight"
+        android:gravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top_layout"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/iv_add_button"
+            android:layout_width="26dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_Add_Address_text"
+            android:src="@drawable/add_blue_icon" />
+
+
+        <TextView
+            android:id="@+id/tv_Add_Address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/regular"
+            android:text="@string/add_new_address"
+            android:textColor="@color/colorBlue"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/view_add"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.4"
+            android:background="@color/gray_view_line"></View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_auto_fill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_use_current"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_tap_auto_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/regular"
+            android:text="@string/tap_to_auto_fill"
+            android:textColor="@color/colorGrey_b5"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/view_tab_auto"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.4"
+            android:background="@color/gray_view_line"></View>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shadow"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_auto_fill_layout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey_b2" />
+
+        <EditText
+            android:id="@+id/login_useremailTextField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorAccent"
+            android:ems="10"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:hint="@string/pincode"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorblack"
+            android:textCursorDrawable="@null"
+            android:textSize="16dp"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size55"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_address_locality"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:ems="10"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:hint="@string/locality"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorGrey_b1"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey_b2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size55"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_address_house"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:ems="10"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:hint="@string/flat_house"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorGrey_b1"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey_b2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size55"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/et_address_city"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:ems="10"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:hint="@string/city"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorGrey_b1"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey_b2" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size55"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/et_landmark"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:ems="10"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:hint="@string/landmark"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorGrey_b1"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shadow"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_address">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey_b2" />
+
+        <EditText
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorAccent"
+            android:ems="10"
+            android:fontFamily="@font/sf_ui_display_regular"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorblack"
+            android:textCursorDrawable="@null"
+            android:textSize="16dp"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size55"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:ems="10"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:hint="@string/phon_no_10_digit"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorGrey_b1"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey_b2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size55"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="@dimen/text_size18"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_alternet_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:ems="10"
+                android:fontFamily="@font/sf_ui_display_regular"
+                android:hint="@string/alternet_phone"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorGrey_b1"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_size16"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_vew_welcome_Text" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey_b2" />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

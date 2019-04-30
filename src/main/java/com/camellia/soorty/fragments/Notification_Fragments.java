@@ -14,7 +14,6 @@ public class Notification_Fragments extends Fragment implements View.OnClickList
 
     private View view;
 
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -43,14 +43,9 @@ public class SignUp_Fragment extends BaseFragment<SignUpFragmentBinding,LoginVie
 
 //    private static final int RC_SIGN_IN = 4104;
 
-    @Inject
 
-    private CompositeDisposable disposable = new CompositeDisposable();
-
-    List<String> permissionNeeds = Arrays.asList("email");
     private LoginViewModel signUpFragementViewModel;
     private SignUpFragmentBinding signUpFragmentBinding;
-
     public String phoneNo = "";
     private String userType = "";
     private String otp = "";
@@ -67,7 +62,6 @@ public class SignUp_Fragment extends BaseFragment<SignUpFragmentBinding,LoginVie
 
 
     }
-
 
     @Override
     public LoginViewModel getViewModel() {

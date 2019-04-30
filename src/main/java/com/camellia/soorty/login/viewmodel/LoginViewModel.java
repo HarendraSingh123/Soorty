@@ -3,6 +3,7 @@ package com.camellia.soorty.login.viewmodel;
 import android.arch.lifecycle.MutableLiveData;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 
 
 import com.camellia.soorty.R;
@@ -23,11 +24,7 @@ public class LoginViewModel extends BaseViewModel {
     }
 
 
-
     private SignInModel signInModel;
-
-
-
     public String phoneNo = "";
     private String userType = "";
     private String otp = "";
@@ -118,13 +115,22 @@ public class LoginViewModel extends BaseViewModel {
     public MutableLiveData<STATUS> validateData() {
         MutableLiveData<STATUS> statusMutableLiveData = new MutableLiveData<>();
 
-        if (phoneNo == null || phoneNo.isEmpty()) {
+
+        if (getUserEmail()== null ||getUserEmail().isEmpty()) {
             statusMutableLiveData.setValue(STATUS.EMPTY);
-        } /*else if (phoneNo.length() < 9) {
+
+            }
+        else if(getUserEmail()!=null && !getUserEmail().isEmpty())
+        {
+            validateEmail(userEmail);
+            }
+
+
+        /*else if (phoneNo.length() < 9) {
             statusMutableLiveData.setValue(STATUS.INVALID);
         } else if (!validatePhone()) {
             statusMutableLiveData.setValue(STATUS.INVALID);
-        } */ else if (getUserfirstname() == null ) {
+        } *//* else if (getUserfirstname() == null ) {
             statusMutableLiveData.setValue(STATUS.EMPTY);
         }
         else if(getUserlastName()==null)
@@ -134,7 +140,7 @@ public class LoginViewModel extends BaseViewModel {
             }
             else if (getTermsNCon() == null || getTermsNCon().isEmpty()) {
             statusMutableLiveData.setValue(STATUS.TERMnCON);
-        }
+        }*/
         else if(getPassword()==null&&getPassword().isEmpty())
         {
             statusMutableLiveData.setValue(STATUS.INVALID_PASSWORD);
@@ -144,6 +150,7 @@ public class LoginViewModel extends BaseViewModel {
 
         else {
             statusMutableLiveData.setValue(STATUS.VALIDATED);
+
         }
         return statusMutableLiveData;
     }

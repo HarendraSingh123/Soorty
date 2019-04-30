@@ -3,10 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     android:background="#FFFFFF"
-    android:orientation="vertical"
-   >
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -29,224 +27,61 @@
 
         </android.support.v7.widget.SearchView>
 
-
-
     </android.support.v7.widget.Toolbar>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-  <android.support.v4.widget.NestedScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
-      <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
-
-          <RelativeLayout
+            <RelativeLayout
               android:id="@+id/rl_viewpager_home"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content" >
+              android:layout_height="wrap_content">
 
               <android.support.v4.view.ViewPager
                   android:id="@+id/pager"
                   android:layout_width="match_parent"
-                  android:layout_height="match_parent"
+                  android:layout_height="240dp"
                   android:layout_alignParentTop="true" />
-
-              <com.viewpagerindicator.CirclePageIndicator
+                <com.viewpagerindicator.CirclePageIndicator
                   android:id="@+id/indicator"
-                  android:layout_width="fill_parent"
+                  android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_alignParentBottom="true"
                   android:layout_centerHorizontal="true"
                   android:gravity="bottom"
                   android:padding="10dip"
                   app:centered="true"
-                  app:fillColor="#fff"
-                  app:pageColor="#000"
+                  app:fillColor="@color/colorAccent"
+                  app:pageColor="@color/dark_gray"
                   app:snap="false" />
           </RelativeLayout>
 
-          <android.support.v7.widget.CardView
-              android:id="@+id/card_view_photo_prints"
-              android:layout_width="match_parent"
-              android:layout_height="240dp"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:background="@drawable/cardbackground"
-              android:layout_below="@+id/rl_viewpager_home">
-              <ImageView
-                  android:id="@+id/iv_photo_prints"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:src="@mipmap/ic_launcher"/>
-
-              <Button
-                  android:id="@+id/btn_photo_prints"
-                  android:layout_width="175dp"
-                  android:layout_height="wrap_content"
-                  android:text="PHOTO PRINTS"
-                  android:layout_gravity="center"
-                  android:background="@drawable/round_shape_btn_yello"
-                  android:textColor="@color/white"
-                  android:fontFamily="@font/bold"
-                  android:onClick="onClick"
-                  />
-          </android.support.v7.widget.CardView>
-
-          <android.support.v7.widget.CardView
-              android:id="@+id/card_view_photo_books"
-              android:layout_width="match_parent"
-              android:layout_height="240dp"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:background="@drawable/cardbackground"
-              android:layout_below="@+id/card_view_photo_prints"
-              android:layout_marginTop="10dp">
-              <ImageView
-                  android:id="@+id/iv_photo_books"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:src="@mipmap/ic_launcher"/>
-
-              <Button
-                  android:id="@+id/btn_photo_books"
-                  android:layout_width="175dp"
-                  android:layout_height="wrap_content"
-                  android:text="PHOTO BOOKS"
-                  android:layout_gravity="center"
-                  android:background="@drawable/round_shape_btn_yello"
-                  android:textColor="@color/white"
-                  android:fontFamily="@font/bold"
-                  android:onClick="onClick"
-                  />
-          </android.support.v7.widget.CardView>
-
-          <android.support.v7.widget.CardView
-              android:id="@+id/card_view_cards"
-              android:layout_width="match_parent"
-              android:layout_height="240dp"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:background="@drawable/cardbackground"
-              android:layout_below="@+id/card_view_photo_books"
-              android:layout_marginTop="10dp">
-              <ImageView
-                  android:id="@+id/iv_cards_home_page"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:src="@mipmap/ic_launcher"/>
-
-              <Button
-                  android:id="@+id/btn_cards_home_page"
-                  android:layout_width="175dp"
-                  android:layout_height="wrap_content"
-                  android:text="CARDS"
-                  android:layout_gravity="center"
-                  android:background="@drawable/round_shape_btn_yello"
-                  android:textColor="@color/white"
-                  android:fontFamily="@font/bold"
-                  android:onClick="onClick"
-                  />
-          </android.support.v7.widget.CardView>
 
 
+            <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/rl_viewpager_home">
 
-          <android.support.v7.widget.CardView
-              android:id="@+id/card_view_calendars"
-              android:layout_width="match_parent"
-              android:layout_height="240dp"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:background="@drawable/cardbackground"
-              android:layout_below="@+id/card_view_cards"
-              android:layout_marginTop="10dp">
-              <ImageView
-                  android:id="@+id/iv_calendars_home_page"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:src="@mipmap/ic_launcher"/>
-
-              <Button
-                  android:id="@+id/btn_calendar_home_page"
-                  android:layout_width="175dp"
-                  android:layout_height="wrap_content"
-                  android:text="CALENDARS"
-                  android:layout_gravity="center"
-                  android:background="@drawable/round_shape_btn_yello"
-                  android:textColor="@color/white"
-                  android:fontFamily="@font/bold"
-                  android:onClick="onClick"
-                  />
-          </android.support.v7.widget.CardView>
-
-
-
-          <android.support.v7.widget.CardView
-              android:id="@+id/card_view_gifts"
-              android:layout_width="match_parent"
-              android:layout_height="240dp"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:background="@drawable/cardbackground"
-              android:layout_below="@+id/card_view_calendars"
-              android:layout_marginTop="10dp">
-              <ImageView
-                  android:id="@+id/iv_gifts_home_page"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:src="@mipmap/ic_launcher"/>
-
-              <Button
-                  android:id="@+id/btn_gifts_home_page"
-                  android:layout_width="175dp"
-                  android:layout_height="wrap_content"
-                  android:text="GIFTS"
-                  android:layout_gravity="center"
-                  android:background="@drawable/round_shape_btn_yello"
-                  android:textColor="@color/white"
-                  android:fontFamily="@font/bold"
-                  android:onClick="onClick"
-                  />
-          </android.support.v7.widget.CardView>
-
-
-          <android.support.v7.widget.CardView
-              android:id="@+id/card_view_comercial"
-              android:layout_width="match_parent"
-              android:layout_height="240dp"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:background="@drawable/cardbackground"
-              android:layout_below="@+id/card_view_gifts"
-              android:layout_marginTop="10dp">
-              <ImageView
-                  android:id="@+id/iv_comercial_home_page"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:src="@mipmap/ic_launcher"/>
-              <Button
-                  android:id="@+id/btn_comercial_home_page"
-                  android:layout_width="175dp"
-                  android:layout_height="wrap_content"
-                  android:text="COMERCIAL"
-                  android:layout_gravity="center"
-                  android:background="@drawable/round_shape_btn_yello"
-                  android:textColor="@color/white"
-                  android:fontFamily="@font/bold"
-                  android:onClick="onClick"
-                  />
-          </android.support.v7.widget.CardView>
+    </android.support.v7.widget.RecyclerView>
 
 
           <RelativeLayout
-
               android:id="@+id/rl_viewpager_themes"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:layout_below="@+id/card_view_comercial"
               android:background="#FAFAFA"
+              android:layout_below="@+id/rv_categories"
               android:layout_marginTop="10dp">
 
-              <TextView
+             <!-- <TextView
                   android:id="@+id/tv_whats_to_love"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -283,7 +118,7 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_centerHorizontal="true"
-                  android:src="@mipmap/ic_launcher"
+                  android:src="@drawable/easy_to_create_bg"
                   android:layout_below="@+id/tv_start_with_beutiful_theme"
                   android:layout_marginTop="48dp" />
 
@@ -305,6 +140,18 @@
                   android:layout_below="@+id/tv_easy_to_creat"
                   android:layout_centerHorizontal="true"
                   />
+              -->
+
+
+
+
+              <android.support.v4.view.ViewPager
+                  android:id="@+id/viewpager_bottom_banners"
+                  android:layout_width="match_parent"
+                  android:layout_height="240dp"
+                  android:layout_alignParentTop="true">
+
+              </android.support.v4.view.ViewPager>
 
               <com.viewpagerindicator.CirclePageIndicator
                   android:id="@+id/circular_theme_indicators"
@@ -312,16 +159,15 @@
                   android:layout_height="wrap_content"
                   android:layout_alignParentBottom="true"
                   android:layout_centerHorizontal="true"
-                  android:layout_below="@+id/tv_easy_to_creat"
                   android:gravity="bottom"
                   android:padding="10dip"
                   app:centered="true"
-                  app:fillColor="#fff"
-                  app:pageColor="#000"
+                  app:fillColor="@color/colorAccent"
+                  app:pageColor="@color/dark_gray"
                   app:snap="false" />
           </RelativeLayout>
 
-          <RelativeLayout
+            <RelativeLayout
               android:id="@+id/rl_tags"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -334,11 +180,11 @@
 
               <ImageView
                   android:id="@+id/iv_outstanding_quality"
-                  android:layout_width="wrap_content"
+                  android:layout_width="45dp"
                   android:layout_height="wrap_content"
-                  android:src="@mipmap/ic_launcher"
+                  android:src="@drawable/outstanding_qulity_bg"
                   android:layout_alignParentLeft="true"
-                  android:layout_marginLeft="35dp"
+                  android:layout_marginLeft="30dp"
                   />
 
               <TextView
@@ -346,7 +192,7 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_below="@+id/iv_outstanding_quality"
-                  android:layout_marginLeft="25dp"
+                  android:layout_marginLeft="20dp"
                   android:maxLines="1"
                   android:text="Outstanding" />
               <TextView
@@ -355,7 +201,7 @@
                   android:layout_height="wrap_content"
                   android:text="Quality"
                   android:layout_below="@+id/tv_outstanding"
-                  android:layout_marginLeft="40dp"
+                  android:layout_marginLeft="35dp"
                   android:maxLines="1" />
 
               <View
@@ -369,14 +215,12 @@
               </View>
 
 
-
-
               <ImageView
                   android:id="@+id/iv_beutiful_thmes"
-                  android:layout_width="wrap_content"
+                  android:layout_width="45dp"
                   android:layout_height="wrap_content"
-                  android:src="@mipmap/ic_launcher"
-                  android:layout_marginLeft="40dp"
+                  android:src="@drawable/beutiful_themes_bg"
+                  android:layout_marginLeft="60dp"
                   android:layout_toRightOf="@+id/iv_outstanding_quality"
                   />
 
@@ -387,7 +231,7 @@
                   android:text="Beutiful"
                   android:layout_below="@+id/iv_beutiful_thmes"
                   android:layout_toRightOf="@+id/veritcal_view_seperator1"
-                  android:layout_marginLeft="35dp"
+                  android:layout_marginLeft="55dp"
                   android:maxLines="1" />
               <TextView
                   android:id="@+id/tv_theme"
@@ -396,7 +240,7 @@
                   android:text="Themes"
                   android:layout_below="@+id/tv_beutiful"
                   android:layout_toRightOf="@+id/veritcal_view_seperator1"
-                  android:layout_marginLeft="35dp"
+                  android:layout_marginLeft="55dp"
                   android:maxLines="1" />
 
               <View
@@ -410,14 +254,12 @@
               </View>
 
 
-
-
               <ImageView
                   android:id="@+id/iv_happines_guaranteed"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:src="@mipmap/ic_launcher"
-                  android:layout_marginLeft="50dp"
+                  android:src="@drawable/cent_percent_hapiness_bg"
+                  android:layout_marginLeft="60dp"
                   android:layout_toRightOf="@+id/iv_beutiful_thmes"
                   />
 
@@ -426,10 +268,10 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_below="@+id/iv_happines_guaranteed"
-                  android:layout_marginLeft="20dp"
+                  android:layout_marginLeft="25dp"
                   android:layout_toRightOf="@+id/veritcal_view_seperator2"
                   android:maxLines="1"
-                  android:text="100% Happiness " />
+                  android:text="100%Happiness " />
               <TextView
                   android:id="@+id/tv_guaranteed"
                   android:layout_width="wrap_content"
@@ -437,25 +279,20 @@
                   android:text="Guaranteed"
                   android:layout_below="@+id/tv_happiness"
                   android:layout_toRightOf="@+id/veritcal_view_seperator2"
-                  android:layout_marginLeft="40dp"
+                  android:layout_marginLeft="30dp"
                   android:maxLines="1" />
 
 
-
-
           </RelativeLayout>
+        </RelativeLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
 
 
 
 
 
-
-      </RelativeLayout>
-
-
-
-
-
-  </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>
